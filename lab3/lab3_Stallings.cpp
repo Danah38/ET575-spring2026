@@ -96,6 +96,93 @@ int main(){
     cout<<"logical comparison 3 = "<<logicalcom<<endl;
     cout<<"logical comparison 4 = "<<logicalcom<<endl;
 
-    // EXERISE 
+    // EXERCISE 
+    cout<<"\n------ Numberical Variables : ------"<<endl;
+    //declare variables
+    int number3 = 15;
+    int number4 = 10;
+    
+    cout<<"number3 = "<<number3<<endl;
+    cout<<"number4 = "<<number4<<endl;
+    cout<<"n = "<<n<<endl;
+
+    cout<<"\n----- Arithemtic Operations ----- "<<endl;
+    // numerical operator, + - * /
+    // % (modulus) returns the remainder of a division
+    int number3 = 15;
+    int number4 = 10;
+    cout<<"sum = "<<number3 + n<<endl;
+    cout<<"substraction = "<<number4 + n<<endl;
+    cout<<"Without casting, division = "<<number3 + number4<<endl;
+    cout<<"Without casting, multiplication = "<<number3 + number4<<endl;
+    // casting convert from one data type into another data type
+    cout<<"division = "<< number3/static_cast<float>(number4)<<endl;
+
+    // % modulus
+    cout<<"mod of two numbers = "<< number3%number4 <<endl;
+
+    cout<<"\n----- Assignment Operations ----- "<<endl;
+    // assignment operators assign a value to a variable itself
+    // ++ increment by 10
+    cout<<"original number3 = "<<number3<<endl;
+    number3 ++;
+    cout<<"updated number3 = "<<number3<<endl;
+    // -- decrement by 5
+    cout<<"original number4 = "<<number4<<endl;
+    number4 --;
+    cout<<"updated number4 = "<<number4<<endl;
+
+    // +=
+    number3 = 15;
+    cout<<"original number3 = "<<number3<<endl;
+    number3 += 10;
+    cout<<"updated number3 = "<<number3<<endl;
+
+    // -=
+    number4 -= 10; // number4 = number4 - 5
+    cout<<"updated number4 with -= 5 --> "<<number4<<endl;
+
+    cout<<"\n----- Boolean Operations ----- "<<endl;
+    // == compare if numbers are equal
+    // != compare if numbers are not equal
+    // > greater than 
+    // < less than
+    // >= greater than or equal to
+    // <= lesser than or equal to
+    // C++ returns 1 for True and 0 for False
+
+    number3 = 25;
+    number4 = 5;
+
+    cout<<"are number and number2 equal? "<<(number == number2)<<endl;
+
+    bool check1 = number3 != number4;
+    bool check2 = number3 > number4;
+
+    // print result
+    cout<<"are number3 and number4 different? "<<check1<<endl;
+    cout<<"is number3 greater than number4? "<<check2<<endl;
+
+    cout<<"\n----- Logical Operations ----- "<<endl;
+    // determine the logic between values
+    // && AND logic. returns TRUE is all statements are TRUE
+    // || OR logic. returns TRUE if at least one of the statements is TRUE
+    // ! NOT(inverter) logic. returns TRUE from a FALSE or viceverse
+    number3 = 25;
+    number4 = 5;
+
+    bool check3 = number3 < number4; // check3 = true(1)
+    bool check4 = number3 >= number4; // check4 = false(0)
+    
+    bool logicalcom = check3 && check4 // true && true = true
+    bool logicalcom2 = check3 && check4 // false && true = false
+    bool logicalcom3 = !logicalcom; // !true = false
+
+    // print result
+    cout<<"logical comparison 1 = "<<logicalcom<<endl;
+    cout<<"logical comparison 2 = "<<logicalcom<<endl;
+    cout<<"logical comparison 3 = "<<logicalcom<<endl;
+    
+
     return 0;
 }
