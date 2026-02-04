@@ -1,0 +1,110 @@
+/*
+Danah Stallings
+Feb 4, 2026
+lab 6, branching, control flow
+*/
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    cout<<"\n----- Example 1: bool variables -----"<<endl;
+    // bool variables returns a 1 for True or a 0 for False
+    bool ispositive;
+    int number;
+
+    cout<<"Enter a number: ";
+    cin>>number;
+
+    ispositive = number > 0;
+
+    cout<<"Is "<<number<<" positive? "<<ispositive<<endl;
+
+    cout<<"\n----- Example 2: if statement -----"<<endl;
+    // if statement will run the code in between the curly braces if the statement is TRUE.
+    int num1 = 8;
+    int num2 = 5;
+
+    if(num1 == num2){
+        cout<<"the numbers are equal"<<endl;
+    }
+    
+    cout<<"End of example 2" <<endl;
+
+    cout<<"\n----- Example 3: if-else statement -----"<<endl;
+    // if-else works as a switch. If 'if' statement, the program will run the codes of the if statement and ignore the code of the 'else' statemnet.
+    // example to check which number, num1 or num2 is greater.
+    if(num1>num2){
+        cout<<"num1 is greater than num2"<<endl;
+    }
+    else{
+        cout<<"num1 is greater than num2"<<endl;
+    }
+
+    cout<<"\n----- Example 4: multiways statement -----"<<endl;
+    // multiway checks more than 2 conditions
+    // example compare if num1 is equal to, greater than, less than num2
+    if(num1==num2){
+        cout<<"num1 is equal to num2"<<endl;
+    }
+    else if(num1>num2){
+        cout<<"num1 is greater than num2"<<endl;
+    }
+    else{
+        cout<<"num2 is greater than num1"<<endl;
+    }
+
+    cout<<"\n----- Example 5: multiways statement: find the color depending of the wavelength -----"<<endl;
+    /*
+   - Ultraviolet: less than 379 nm and greater than or equal to 10 nm
+   - Blue: 380 nm to 520 nm
+   - Green: 521 nm to 590 nm
+   - Red: 591 nm to 740 nm
+   - Infrared: more than 741 nm
+   - Any wavelength less than 10 nm is undefined.
+     */
+
+     // declar variables
+     int wavelength = 0;
+     string color;
+
+     // collect the wavelength
+     cout<<"Enter a wavelength: "<<endl;
+     cin>>wavelength;
+
+     if(wavelength<=379 && wavelength>=10){
+        color = "ultraviolet";
+     }
+     else if(wavelength<=520 && wavelength>=380)
+        color = "blue";
+     else if(wavelength<=590 && wavelength>=521)
+        color = "green";
+     else if(wavelength<=740 && wavelength>=591)
+        color = "red";   
+     else if(wavelength<=741)
+        color = "underfined";
+
+     // print result
+     cout<<"Wavelength of "<<wavelength<<" emits color "<<color<<endl;
+     
+    cout<<"\n ----- EXERCISE -----"<<endl;
+    // declare the variables
+    char gpa = ' ';
+    float final_exam = 0;
+    float labs = 0;
+    float homework = 0;
+    float grade = 0;
+
+    // collect data: final_exam, labs, and homework
+
+    // calculate the grade = final_exam *0.5 + labs*0.3 + homework*0.2
+
+    // multiway condition
+
+    // print result
+
+
+
+
+    return 0;
+}
