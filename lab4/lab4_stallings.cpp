@@ -76,15 +76,32 @@ int main(){
     // find the index for 'act' from word
     cout<<"Index for 'act' = "<<word.find("act")<<endl;
 
-    cout<<"\n ---- EXERCISE: Lab Assignment 4 ----"<<endl;  
-    // collect new word
-    cout<<"Enter a new word: ";
-    cin>>word;
+    cout<<"\n ---- EXERCISE: Lab Assignment 4 ----"<<endl; 
+    string name = "word"; 
+    cout<<"The 2nd character of the  = "<<name.at(1)<<endl;
 
-    // print the 2nd character of the word
-    cout<<"The 2nd character of the word = "<<word.at(2)<<endl;
+    // print the 2nd character of the name
+    cout<<"The 2nd character of the name = "<<name.at(1)<<endl;
     
+    // length method returns the amount of charcters in a string
+    int name_length = name.length();
+    cout<<"Name has "<<name_length<<" characters"<<endl;
 
+    // print the length of the name
+    cout<<"The length of the word = "<<name.at(1)<<endl;
 
+    // replace method 
+    string replaced = "word";
+    cout<<"Oringinal word = "<<word<<endl;
+    // replace the letter 'r' with '--$--'. The result will be "wo--$--d"
+    word.replace(3,1,"--$--");
+    cout<<"After the replace method = "<<word<<endl;
+
+    // erase method
+    word = "wo--$--d";
+    cout<<"Original word = "<<word<<endl;
+    // erase '--d' from word. The result should be 'w--$'
+    word.erase(5,3); // erase three characters from index 5
+    cout<<"After erase method = "<<word<<endl;
     return 0;
 }
