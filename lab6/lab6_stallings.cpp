@@ -85,8 +85,8 @@ int main(){
         color = "underfined";
 
      // print result
-     cout<<"Wavelength of "<<wavelength<<" emits color "<<color<<endl;
-     
+     cout<<"Wavelenght of "<<wavelength<<" emits color "<<color<<endl;
+    
     cout<<"\n ----- EXERCISE -----"<<endl;
     // declare the variables
     char gpa = ' ';
@@ -96,15 +96,34 @@ int main(){
     float grade = 0;
 
     // collect data: final_exam, labs, and homework
+    grade = final_exam *0.5 + labs *0.3 + homework *0.2;
 
-    // calculate the grade = final_exam *0.5 + labs*0.3 + homework*0.2
+    // calculate the grade = final_exam *0.5 + labs *0.3 + homework *0.2
+    grade = final_exam *0.5 + labs *0.3 + homework *0.2;
 
     // multiway condition
+    if(grade>=90 && grade <=100){
+        gpa = "A";
+    }
+    else if(grade >=80 && grade <=89){
+        gpa = "B";
+    }
+    else if(grade >=70 && grade <=79){
+        gpa = "C";
+    }  
+    else if(grade >=60 && grade <=69){
+        gpa = "D";
+    }      
+    else if(grade >=79 && grade <=69){
+        gpa = "F";
+    }  
+    else{
+        gpa = "";
+    }  
 
     // print result
-
-
-
+    cout<<"Final Grade "<<grade<<endl;
+    cout<<"GPA "<<gpa<<endl;
 
     return 0;
 }
