@@ -87,7 +87,7 @@ int main(){
      // print result
      cout<<"Wavelenght of "<<wavelength<<" emits color "<<color<<endl;
     
-    cout<<"\n ----- EXERCISE -----"<<endl;
+    cout<<"\n ----- EXERCISE : lab 6 -----"<<endl;
     // declare the variables
     char gpa = ' ';
     float final_exam = 0;
