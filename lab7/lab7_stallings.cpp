@@ -79,18 +79,65 @@ int main(){
     cout<<"Enter the car price: $ "; 
     cin>>budget;
 
-    if(budget>0){
-      if(price<=65000){
-         if(budget<30001){
-            cout<<budget<<" is the car price more than the budget"<<endl;
-         }
+    if(budget>=0 && budget<=10000){
+      cout<<"keep saving!"<<endl;
+    }
+    else if(budget>=10001 && budget<=30000){
+      cout<<"Economy Car!"<<endl; 
+      if (budget>=10001 && budget<=20000){
+         cout<<budget<<"Compact Car"<<endl;
       }
     }
-    else if(budget<70000){
-      cout<<"You can afford an Economic Car = Mid-size Car"<<endl;
-         if(budget<price)
-           cout<<budget<<"\t"<<price<<"\t"<<endl;    
+    if(budget>=30001 && budget<=70000){
+      cout<<"Standard Car"<<endl;
     }
+
+
+
+    
+    else if(budget>=70001 && budget<=150000){
+      cout<<"Performance-oriented Car"<<endl; 
+    }    
+    if(budget>=150000){
+      cout<<"High-end luxury cars "<<endl;
+    }
+    else if(budget<=0){
+      cout<<"Invalid budget!"<<endl;        
+    }
+
+    // Nested Conditional Statement
+    
+    }
+    else if(budget>=20001  && budget<=30000){
+        cout<<budget<<"Mid-size Car"<<endl;
+        if(budget>=20001<budget<=30000)
+           cout<<budget>=20001<<"\t"<<budget<=30000<<"\t"<<endl;
+    }
+    else if(budget>=30001  && budget<=50000){
+        cout<<budget<<"Sedan"<<endl;
+        if(budget>=30001<budget<=50000)
+           cout<<budget>=30001<<"\t"<<budget<=50000<<"\t"<<endl;
+    }
+       else if(budget>=70001  && budget<=100000){
+        cout<<budget<<"Luxury Sedan"<<endl;
+        if(budget>=70001<budget<=100000)
+           cout<<budget>=70001<<"\t"<<budget<=100000<<"\t"<<endl;
+    }        
+       else if(budget>=70001  && budget<=100000){
+        cout<<budget<<"Sports Car"<<endl;
+        if(budget>=70001<budget<=100000)
+           cout<<budget>=70001<<"\t"<<budget<=100000<<"\t"<<endl;
+    }   
+       else if(budget>=100001  && budget<=150000){
+        cout<<budget<<"Supercar"<<endl;
+        if(budget>=100001<budget<=150000)
+           cout<<budget>=100001<<"\t"<<budget<=150000<<"\t"<<endl;
+    }   
+       else if(budget>=70001  && budget<=100000){
+        cout<<budget<<"Mid-size Car"<<endl;
+        if(budget>=70001<budget<=100000)
+           cout<<budget>=70001<<"\t"<<budget<=100000<<"\t"<<endl;
+    }   
 
         return 0;
     }
