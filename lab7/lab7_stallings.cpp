@@ -70,8 +70,28 @@ int main(){
     cout<<"The number is "<<(x%2==0 ? "Even" : "Odd")<<endl;
     
 
-    cout<<"\n---- EXERCISE: : nested conditional statement ----"<<endl;    
-  
+    cout<<"\n---- EXERCISE: : nested conditional statement ----"<<endl;   
+    
+    int budget;
+    int price;
+    cout<<"Enter the budget: $ "; 
+    cin>>budget;
+    cout<<"Enter the car price: $ "; 
+    cin>>budget;
+
+    if(budget>0){
+      if(price<=65000){
+         if(budget<30001){
+            cout<<budget<<" is the car price more than the budget"<<endl;
+         }
+      }
+    }
+    else if(budget<70000){
+      cout<<"You can afford an Economic Car = Mid-size Car"<<endl;
+         if(budget<price)
+           cout<<budget<<"\t"<<price<<"\t"<<endl;    
+    }
+
         return 0;
     }
     
