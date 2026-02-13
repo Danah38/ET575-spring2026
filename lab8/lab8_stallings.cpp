@@ -79,8 +79,72 @@ int main(){
     }      
 
     cout<<"\n----- Lab Exercise-----"<<endl;
-
+    int num1, num2;
+    char operation;
+    cout<<"Enter the first number: "<<endl;
+    cin>>num1;
+    cout<<"Enter the second number: "<<endl;
+    cin>>num2;
     
+    // Operations
+    cout<<"Select an operation: "<<endl;
+    cout<<"+ for addition"<<endl;
+    cout<<"- for subtraction"<<endl;
+    cout<<"* for multiplication"<<endl;
+    cout<<"/ for division"<<endl;
+    cout<<"q to exit the program"<<endl;
+    cout<<"% for modulus"<<endl;
+    cout<<"Enter the operation: "<<endl;
+    cin>>operation;
+
+    // switch-case
+    switch (operation)
+    {
+    case '+': 
+        cout<<"operation = +"<<endl;
+        break;
+    case '-':
+        cout<<"operation = -"<<endl;
+        break;  
+    case '*': 
+        cout<<"operation = *"<<endl;
+        break;
+    case '/': 
+        cout<<"operation = /"<<endl;
+        break;  
+    case 'q': 
+        cout<<"operation = q"<<endl;
+        break;
+    case '%': 
+        cout<<"operation = %"<<endl;
+        break;  
+    default:
+        cout<<"operation = invalid"<<endl;
+        break;     
+    }
+
+    if(num1 + num2){
+        cout<<num1<<"operation: "<<num1 + num2 <<endl;
+        if(num1 - num2)
+           cout<<num1<<"operation: "<<num1 - num2 <<endl;
+        else
+           cout<<num1<<"\t"<<num2<<endl;
+    }
+    if(num1 * num2){
+        cout<<num1<<"operation: "<<num1 * num2 <<endl;
+
+    }
+        if(num2!=0){
+             cout<<num1/num2<<"operation: "<<num1 / num2 <<endl;
+    }
+    else 
+    {
+        cout<<"Error: modulus "<<endl;
+        cout<<"Error: invalid operation "<<endl;
+    }
+    
+    // prompt result
+    cout<<"Operation is "<<operation<<endl;
 
     return 0;
 }
