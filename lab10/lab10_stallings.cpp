@@ -1,0 +1,84 @@
+/*
+Danah Stallings
+Mar 2, 2026
+lab 10, loop mechanims
+*/
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    cout<<"\n----- Example 1: For loop basics"<<endl;
+
+    for(int action = 0; action<5; action++ ){
+        cout<<"Hello "<<action<<endl;
+    }
+
+    /* loop analysis table
+    loop iteration | action | action<5 | cout<<"Hello "<<action | action++
+    --------------------------------------------------------------------------------------
+        1          | 0      |   true    | Hello 0                | action = 0+1 = 1
+        2          | 1      |   true    | Hello 1                | action = 1+1 = 2  
+        3          | 2      |   true    | Hello 2                | action = 2+1 = 3
+        4          | 3      |   true    | Hello 3                | action = 3+1 = 4
+        5          | 4      |   true    | Hello 4                | action = 4+1 = 5
+        6          | 5      |   false (stop the loop)  
+    */
+
+    cout<<"\n----- Example 2: For loop as an increament counter"<<endl;
+    // counter from 1 to 10 (inclusive) with step of 1 --> 1,2,3,4,5,6,7,8,9,10
+    int x = 1;
+    for(x; x<=10; x++){
+        cout<<x<<"\t";
+    }
+    cout<<endl;
+
+    cout<<"\n----- Example 3: For loop as an decreament counter"<<endl;
+    // counter from 2 to -5 (inclusive) with step of 1 --> 2,1,0,-1,-2,-3,-4,-5
+    for(int n = 2; n>= -5; n-- ){
+        cout<<n<<"\t";
+    }
+    cout<<endl;
+
+    cout<<"\n----- Example 4: For loop as an increament counter with different steps"<<endl;
+    // counter from 1 to 20 (exclusive) in a step of 3 --> 1,4,7,10,13,16,19 
+    for(int m = 1; m<20; m+=3 ){
+        cout<<m<<"\t";
+    }
+    cout<<endl;
+
+    cout<<"\n----- Example 5: Nested conditional statement within the loop"<<endl;
+    // counter from -10 to 10, step of 3, count how many numbers are multiple of 5 within the counter --> 
+    int counter_5 = 0; 
+    for(int x = -10; x<=10; x+=3 ){
+        cout<<x<<"\t";
+        if(x%5==0 && x !=0){
+            counter_5 ++;
+        }
+    }
+    cout<<endl;
+    cout<<"There is/are "<<counter_5<<" number/s multipled of 5"<<endl;
+
+    cout<<"\n----- Exercise 1 "<<endl;
+    // counter from 21 to -21 (inclusive) in step of 5, count how many numbers are multiple of 2 within the counter --> 
+    int counter_2 = 0; 
+    for(int a = 21; x>= -21; a-= 5 ){
+        cout<<a<<"\t";
+        if(x%2==0 && x !=0){
+            counter_2 ++;
+        }
+    }
+    cout<<endl;
+    cout<<"There is/are "<<counter_2<<" number/s multipled of 2"<<endl;
+
+    cout<<"\n----- Exercise 2 "<<endl;
+    int usernumber;
+    cout<<"Enter an initial number: ";
+    cin>>usernumber;
+
+    for(usernumber; ;){
+
+    }
+
+    return 0;
+}
