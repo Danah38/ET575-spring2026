@@ -62,23 +62,25 @@ int main(){
     cout<<"\n----- Exercise 1 "<<endl;
     // counter from 21 to -21 (inclusive) in step of 5, count how many numbers are multiple of 2 within the counter --> 
     int counter_2 = 0; 
-    for(int a = 21; x>= -21; a-= 5 ){
+    for(int a = 21; a>= -21; a -= 5 ){
         cout<<a<<"\t";
-        if(x%2==0 && x !=0){
+        if(a%2==0){
             counter_2 ++;
         }
     }
     cout<<endl;
-    cout<<"There is/are "<<counter_2<<" number/s multipled of 2"<<endl;
+    cout<<"There is/are "<<counter_2<<" number/s multiples of 2"<<endl;
 
     cout<<"\n----- Exercise 2 "<<endl;
     int usernumber;
-    cout<<"Enter an initial number: ";
+    cout<<"Enter an inital number: ";
     cin>>usernumber;
 
-    for(usernumber; ;){
-
+    for(int g = usernumber; g<=30; g += 4 ){
+        cout<<g<<"\t";
     }
+    cout<<endl;
+    cout<<"There is/are "<<usernumber<<"increment of 4 at each iteration"<<endl;
 
     return 0;
 }
