@@ -139,7 +139,7 @@ int main(){
         int digitSum = 0;
         int temp = num1;
 
-        while (temp != 0){
+                while (temp != 0){
             digitSum += temp % 10;   
             temp /= 10;              
         }
