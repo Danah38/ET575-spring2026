@@ -130,7 +130,24 @@ int main(){
     cout<<"The balance is $"<<balance<<endl;
 
     cout<<"\n-----Lab Exercise"<<endl;
-    
+    int num1;
+    int totalSum = 0;
+    cout << "Enter a num1 (0 to stop): ";
+    cin >> num1;
+
+    while (num1 != 0){
+        int digitSum = 0;
+        int temp = num1;
+
+        while (temp != 0){
+            digitSum += temp % 10;   
+            temp /= 10;              
+        }
+        totalSum += digitSum;
+        cout << "Enter a num1 (0 to stop): ";
+        cin >> num1;
+    }
+    cout << "The total sum is " << totalSum << endl;
 
     return 0;
 }
