@@ -1,6 +1,6 @@
 /*
 Danah Stallings
-Homework 3 - For Loop
+Homework 4 - For Loop
 */
 
 #include<iostream>
