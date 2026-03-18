@@ -36,5 +36,16 @@ int main(){
     
     printarea(length, width, area_rec);
 
+    cout<<"\n-----Lab Exercise: -----"<<endl;
+    int number;
+    cout<<"Enter an integer: ";
+    cin>>number;
+
+    bool result = isEven(number %2==0);
+
+    cout<<"Is the number even? "<<number<<isEven<<endl;
+
+    printResult(number, result);
+
     return 0;
 }
