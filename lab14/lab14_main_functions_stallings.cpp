@@ -26,7 +26,20 @@ int main(){
     printresult(side1, side2, h);
 
     cout<<"\n ----- Lab Exercise: Create three functions ------ "<<endl;
-    
-    
+    double x1, y1, x2, y2, distance;
+
+    cout << "Enter coordinates for point 1:" << endl;
+    x1 = getPositiveNumber();
+    y1 = getPositiveNumber();
+
+    cout << "Enter coordinates for point 2:" << endl;
+    x2 = getPositiveNumber();
+    y2 = getPositiveNumber();
+
+    distance = calculateDistance(x1, y1, x2, y2);
+
+    printResult(x1, y1, x2, y2, distance);
+
+
     return 0;
 }

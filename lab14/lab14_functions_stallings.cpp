@@ -101,3 +101,29 @@ float hypotenuse(int side1, int side2){
 void printresult(int side1, int side2, float h){
     cout<<"The hypotenuse with sides "<<side1<<" and "<<side2<<" is ="<<h<<endl;
 }
+
+// Lab Exercise
+// Function 1: collect and return a number greater than zero
+double getPositiveNumber(){
+    double num;
+
+    cout<<"Enter a number greater than 0: ";
+    cin>>num;
+
+    while(num <= 0){
+        cout<<"Invalid input. Enter a number greater than 0: ";
+        cin>>num;
+    }
+    return num;
+}
+
+// Function 2: calculate and return
+double calculateDistance(double x1, double y1, double x2, double y2){
+    return sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+}
+
+// Function 3: print result
+void printResult(double x1, double y1, double x2, double y2, double distance){
+    cout<<"The distance of points" <<x1<< ", " <<y1<< " and " <<x2<< ", " <<y2<<" is " <<distance<<endl;
+}
+
