@@ -42,3 +42,22 @@ bool matchdices(int roll1, int roll2){
 void printdices(int roll1, int roll2, bool result){
     cout<<"Is "<<roll1<<"the same as "<<roll2<< "? "<<result<<endl;
 }
+
+// Lab Exercise 
+// Function 1:
+int rollDie(){
+    return rand()%6 + 1;
+}
+// Function 2:
+bool isSnakeEyes(int die1, int die2){
+    return(die1 == 1 && die2 == 1);
+}
+//Function 3:
+void printresult(bool result){
+    if(result){
+        cout<<"Congrats! You got snake eyes!" <<endl;
+    } 
+    else{
+        cout<<"Better luck next time." <<endl;
+    }
+}

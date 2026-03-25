@@ -28,7 +28,16 @@ int main(){
     printdices(roll1, roll2, resultmatch);
 
     
-    cout<<"\n Lab Exercise:  "<<endl;
+    cout<<"\n Lab Exercise: Function 1 "<<endl;
+    int die1 = rollDie();
+    int die2 = rollDie();
+    srand(time(0));
+    cout<<"Die 1: " << die1 <<endl;
+    cout<<"Die 2: " << die2 <<endl;
+
+    bool result = isSnakeEyes(die1, die2);
+
+    printresult(result);
     
     return 0;
 }
