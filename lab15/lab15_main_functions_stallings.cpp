@@ -38,7 +38,7 @@ int main(){
     bool result = isSnakeEyes(die1, die2);
 
     printresult(result);
-    
+
     return 0;
 }
 
