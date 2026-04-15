@@ -22,5 +22,28 @@ int main(){
     cout<<"\n----- Example 3: Intro to Array -----"<<endl;
     introarray();
 
+    cout<<"\n----- Example 4: Length of an Array -----"<<endl;
+    lenghtarray();
+
+    cout<<"\n----- Example 5: Loop through an Array -----"<<endl;
+    looparray();
+
+    cout<<"\n----- Example 6: Pass an Array to a function -----"<<endl;
+    // Declare an array
+    const int s = 3;
+    int numbers[s];
+
+    // Fill up the array with data
+    fillup(s,numbers);
+
+    // Print the values in an array
+    printarray(s,numbers);
+
+    // Print the max value
+    int m = maxnumber(s,numbers);
+    cout<<"the maximum number is "<<m<<endl;
+
+    cout<<"\n----- Lab 16 Assignment -----"<<endl;
+
     return 0;
 }
