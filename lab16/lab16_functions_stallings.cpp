@@ -137,5 +137,12 @@ void pointerreference(){
 
     // Lab 16 Assignment 
     int scores[5];
+
+    scores[0] = 60; 
+    scores[1] = 90;
+    scores[2] = 75;
+    scores[3] = 88;
+    scores[4] = 100;
+
     
   }  
