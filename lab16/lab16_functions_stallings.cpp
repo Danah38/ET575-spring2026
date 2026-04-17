@@ -136,13 +136,21 @@ void pointerreference(){
     return maxvalue;
 
     // Lab 16 Assignment 
-    int scores[5];
+    int minnumber(int arraysize, int arrnumbers[]){
+    int minvalue = arrnumbers[0];
 
-    scores[0] = 60; 
-    scores[1] = 90;
-    scores[2] = 75;
-    scores[3] = 88;
-    scores[4] = 100;
+    for(int index = 1; index<arraysize; index++){
+        if(arrnumbers[index]<minvalue){ 
+            minvalue = arrnumbers[index];
+        }
+    }
+    return minvalue;
+  }
 
-    
-  }  
+  int findlowest(){
+    int scores[5] = {60, 90, 75, 88, 100};
+
+    return minnumber(5, scores);
+  }
+
+
