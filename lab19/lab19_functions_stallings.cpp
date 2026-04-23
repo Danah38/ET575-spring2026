@@ -4,7 +4,7 @@ April 22, 2026
 lab 19: 2D Array 
 */
 
-
+const int COLSIZE = 5;
 #include<iostream>
 using namespace std;
 
@@ -36,7 +36,17 @@ void printsum(int sumallevenpositive){
 }
 
 // Lab Assignment: 2D Array
-void print2d(int arr[][COLSIZE], int rowsize){
+const int ROWS = 3;
+const int COLS = 4;
+void populate(int arr[][COLSIZE], int rowsize){
+    for(int row = 0; row<rowsize; row++){
+        for(int col = 0; col<COLSIZE; col++){
+            arr[row][col] = rand() % 101;
+        }
+    }
+}
+
+void printarray(int arr[][COLSIZE], int rowsize){
     for(int row = 0; row<rowsize; row++){
         for(int col = 0; col<COLSIZE; col++){
             cout<<arr[row][col]<<"\t";
@@ -47,11 +57,10 @@ void print2d(int arr[][COLSIZE], int rowsize){
 
 double average(int arr[][COLSIZE], int rowsize){
     int sum = 0;
-    for(int row = 0; row<rowsize; row++){
-        for(int col = 0; col<COLSIZE; col++){
+    for(int row = 0; row < rowsize; row++){
+        for(int col = 0; col < COLSIZE; col++){
             sum += arr[row][col];
         }
-        int totalelement = row * col;
     }
-    return doublesum / totalelement;
+    return (double)sum/(rowsize * COLSIZE);
 }

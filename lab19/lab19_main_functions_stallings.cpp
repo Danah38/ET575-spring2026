@@ -26,13 +26,27 @@ int main(){
     printsum(sumevenpositive(a,rowsize));
 
     cout<<"\n----- Lab Assignment: 2D Array"<<endl;
-    int rowsize = 3;
-    int a[rowsize][COLSIZE] ={
-        {4,8,-12},
-        {1,-8,3,5,7},
-        {-6,2,9}
-    };
+    const int ROWSIZE = 3;
+    int arr[ROWSIZE][COLSIZE];
+    char choice;
 
+    srand(time(0));
+
+    do{
+        cout<<"-------- // -------- // --------"<<endl;
+
+        populate(arr, ROWSIZE);
+        printarray(arr, ROWSIZE);
+
+        cout<<endl;
+        cout<<"Average = " <<average(arr, ROWSIZE)<<endl;
+        cout<<endl;
+
+        cout<<"Another run? (y/n): ";
+        cin>>choice;
+        cout<<endl;
+
+    }while(choice == 'y' || choice == 'Y');
 
     return 0;
 }
