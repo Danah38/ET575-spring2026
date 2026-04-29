@@ -84,10 +84,32 @@ void appendmsg(string filename, string msg){
     fout.close();
 }
 
-// Lab Assignment
+// Example 5: Check if a file exists
+void checkfile(string filename){
+    ifstream fin;
+    fin.open(filename);
+
+    // if the filename doesn't exist in the root directory,
+    if(fin.fail()){
+        cout<<"File "<<filename<<" doesn't exist!"<<endl;
+        exit(1);
+    }
+
+    // if the filename exists, the read all the line
+    string eachline;
+    while(getline(fin, eachline )){
+        cout<<"Line 1 = "<<eachline<<endl;
+    }
+
+    // close the file 
+    fin.close();
+}
+
+// Lab 20 Assignment
 // Function 1
 void createfile(){
     ofstream file("data_user.txt");
+    string name;
 
     if(file.is_open()){
         file<<"This is my output file : Type your full name.\n";
@@ -114,17 +136,13 @@ void appendfile(string msg){
 
 // Function 3 
 void readfile(string filename){
-    ifstream file(filename);
+    ifstream fin;
     string line;
+    fin.open(filename);
 
-    if(file.is_open()){
-        cout<<"\n--- File Contents ---\n";
-        while (getline(file, line)){
-            cout<<line<<endl;
-        }
-        file.close();
-    } 
-    else{
-        cout<<"Error opening file for reading.\n";
-    }
+    while(getline(file, line)){
+        cout<<"File Contents "<<line<<endl;
 }
+    file.close();
+}
+

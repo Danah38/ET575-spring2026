@@ -25,17 +25,21 @@ int main(){
     cout<<"\n----- Example 4: Append Data -----"<<endl;
     appendmsg("samplefile.txt", "student's name");
 
-    cout<<"\n----- Lab Assignment: Files Handling -----"<<endl;
-    string name;
+    cout<<"\n----- Example 5: Check if a file exists -----"<<endl;
+    checkfile("example1.txt");
+    checkfile("samplefile.txt");
 
+    cout<<"\n----- Lab 20 Assignment: Files Handling -----"<<endl;
+    string name;
     createfile();
-    cout << "Enter your full name: ";
+    cout<<"Enter your full name: ";
 
     getline(cin, name);
 
     appendfile(name);
 
     readfile("data_user.txt");
+
 
     return 0;
 }
