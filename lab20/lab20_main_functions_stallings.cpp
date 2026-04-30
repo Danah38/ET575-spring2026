@@ -3,9 +3,9 @@ Danah Stallings
 April 27, 2026
 lab 20: Parsing and File handling
 */
-#include <fstream>
+#include<fstream>
 #include<iostream>
-#include <string>
+#include<string>
 #include "lab20_functions_stallings.cpp"
 
 using namespace std;
@@ -30,16 +30,9 @@ int main(){
     checkfile("samplefile.txt");
 
     cout<<"\n----- Lab 20 Assignment: Files Handling -----"<<endl;
-    string name;
     createfile();
-    cout<<"Enter your full name: ";
-
-    getline(cin, name);
-
-    appendfile(name);
-
+    appendfile("John Smith");
     readfile("data_user.txt");
-
 
     return 0;
 }
