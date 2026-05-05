@@ -24,26 +24,44 @@ string line;
 }
 
 // Function 2: Total count of the words in the file
-void totalcountwords(string filename, string name){
+void totalcountwords(string filename){
     ifstream inputfile(filename);
-    ofstream outputfile("wordcounts.txt");
-    string name;
-
+    
     if(! inputfile){
         cout<<"Error opening file: " <<filename<<endl;
-        return;
+        return 0;
     }
-    int wordcount =
+    
+    string word;
+    int wordcount = 0;
+
+    while (inputfile>>word){
+        wordcount++;
+    }
+
+    inputfile.close();
+    return wordcount;
 }
 
 // Function 3: Count one specific word 
-void appendfile(string msg){
-    ofstream file("wordcounts.txt", ios::app);
+int countEarthOccurrences(string filename){
+    ifstream inFile(filename);
 
-    if (file.is_open()){
-        file<<msg<<endl;
-        file.close();
-        cout<<"Message appended successfully.\n";
-    } 
+    if(!inputfile){
+        cout<<"Error opening file: " <<filename<<endl;
+        return 0;
+    }
+
+    string word;
+    int count = 0;
+
+    while (inputfile>>word){
+        if(word == "Earth"){
+            count++;
+        }
+    }
+    inputfile.close();
+    return count;
 }
-    
+
+

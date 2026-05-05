@@ -51,4 +51,48 @@ int search(int *arr, int numberuserindex, int target){
 
 }
 
-// Exercise 
+// Exercise: Loop Array Application
+int collectnumber(int *arr, int arraysize){
+    int num;
+    int index = 0;
+    cout<<"Enter up to 5 non-zero integers(0 to stop):" <<endl;
+     while(index < arraysize){
+        cin>>num;
+        if(num == 0){
+            arr[index] = num;
+            index++;
+        }
+}
+    return index; 
+}
+
+double averagenumber(int arr[], int listsize){
+    int sum = 0;
+    for(int r = 0; r < listsize; r++){
+        sum += arr[r];
+    }
+
+    return (double)sum / listsize;
+}
+
+int closestmean(int arr[], int listsize, double avg){
+    int closest = arr[0];
+    double mindiff = abs(arr[0] - avg);
+
+    for(int r = 1; r < listsize; r++){
+        double diff = abs(arr[r] - avg);
+
+        if(diff<mindiff){
+            mindiff = diff;
+            closest = arr[r];
+        }
+    }
+    return closest;
+}
+
+void printresult(int *arr, int listsize ,double avg, int closest){
+    for(int r = 1; r < listsize; r++){
+        cout<<arr[r]<<"\t";
+    }
+    cout<<"The closest number to average "<<avg<<" is "<<closest<<listsize<< "." <<endl;
+}

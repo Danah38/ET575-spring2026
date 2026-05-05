@@ -45,3 +45,4 @@ float arrayavg(int *ar, int s){
     }
     return (float)sum/s;
 }
+

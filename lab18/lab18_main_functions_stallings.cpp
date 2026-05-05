@@ -32,7 +32,17 @@ int main(){
     int foundindex = search(a,listsize,searchnumber);
     cout<<"Test search index "<<foundindex<<endl;
 
-    // Exercise 
-    
+    cout<<"\n----- Exercise: Loop Array Application -----"<<endl;
+    const int MAX = 5;
+    int numbers[MAX];
+
+    int size = collectnumber(numbers,MAX);
+
+    double avg = averagenumber(numbers, listsize);
+
+    int closest = closestmean(numbers, listsize, avg);
+
+    printresult(numbers, closest, listsize, avg);
+
     return 0;
 }
